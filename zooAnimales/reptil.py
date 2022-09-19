@@ -7,6 +7,7 @@ class Reptil(Animal):
 
     def __init__(self,nombre,edad,habitat,genero,colorEscamas,largoCola):
         super().__init__(nombre,edad,habitat,genero)
+        Animal.reptiles=Animal.reptiles+1
         self.__colorEscamas=colorEscamas
         self.__largoCola=largoCola
         self.__listado.append(self)

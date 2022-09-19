@@ -7,6 +7,7 @@ class Anfibio(Animal):
 
     def __init__(self,nombre,edad,habitat,genero,colorPiel,venenoso):
         super().__init__(nombre,edad,habitat,genero)
+        Animal.anfibios=Animal.anfibios+1
         self.__colorPiel=colorPiel
         self.__venenoso=venenoso
         self.__listado.append(self)
@@ -24,7 +25,7 @@ class Anfibio(Animal):
         self.__colorPiel=colorPiel
 
     @classmethod
-    def cantidadMamiferos(cls):
+    def cantidadAnfibios(cls):
         return len(cls.__listado)
     
     @classmethod

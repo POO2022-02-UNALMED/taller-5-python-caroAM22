@@ -7,6 +7,7 @@ class Pez(Animal):
 
     def __init__(self,nombre,edad,habitat,genero,colorEscamas,cantidadAletas):
         super().__init__(nombre,edad,habitat,genero)
+        Animal.peces=Animal.peces+1
         self.__colorEscamas=colorEscamas
         self.__cantidadAletas=cantidadAletas
         self.__listado.append(self)
@@ -24,7 +25,7 @@ class Pez(Animal):
         self.__cantidadAletas=cantidadAletas
 
     @classmethod
-    def cantidadMamiferos(cls):
+    def cantidadPeces(cls):
         return len(cls.__listado)
     
     @classmethod

@@ -1,5 +1,10 @@
 class Animal:
     __totalAnimales=0
+    mamiferos=0
+    aves=0
+    anfibios=0
+    peces=0
+    reptiles=0
 
     def __init__(self,nombre,edad,habitat,genero):
         self.__nombre=nombre
@@ -46,7 +51,7 @@ class Animal:
 
     @classmethod
     def totalPorTipo(cls):
-        return "Mamiferos: " + cls.cantidadMamiferos()+"\n"+"Aves: " + cls.cantidadAves()+"\n"+"Reptiles: " + cls.cantidadReptiles()+"\n"+"Peces: " + cls.cantidadPeces()+"\n"+"Anfibios: "+ cls.cantidadAnfibios()
+        return "Mamiferos : " + str(cls.mamiferos) +"\n"+"Aves : " + str(cls.aves)+"\n"+"Reptiles : " + str(cls.reptiles)+"\n"+"Peces : " + str(cls.peces)+"\n"+"Anfibios : "+ str(cls.anfibios)
 
     def toString(self):
         if self.__zona!=[] and self.__zona[0].__getZoo()!=None:
